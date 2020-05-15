@@ -53,4 +53,22 @@ public class Day01 {
         String sub2 = s.substring(0,n);
         return new StringBuilder(sub+sub2).toString();
     }
+    //LCP01猜数字
+    // 示例 1：
+    //输入：guess = [1,2,3], answer = [1,2,3]
+    //输出：3
+    //解释：小A 每次都猜对了。
+    //示例 2：
+    //输入：guess = [2,2,3], answer = [3,2,1]
+    //输出：1
+    //解释：小A 只猜对了第二次。
+    public int game(int[] guess, int[] answer) {
+        int count = 0;
+        for(int i = 0 ; i < guess.length; i ++){
+            if(guess[i]==answer[i]){
+                count++;
+            }
+        }
+        return count;
+    }
 }
