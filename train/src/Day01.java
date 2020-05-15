@@ -27,4 +27,30 @@ public class Day01 {
         }
         return booleans;
     }
+    //面试题58-II。左旋转转字符串：将前面n个字符串放到后面 abcdefg  2
+    //示例 1：
+    //输入: s = "abcdefg", k = 2
+    //输出: "cdefgab"
+    //示例 2：
+    //输入: s = "lrloseumgh", k = 6
+    //输出: "umghlrlose"
+    public String reverseLeftWords(String s, int n) {
+//        char[]   c = s.toCharArray();
+//        char[]  a = new char[n];
+//        for (int i = 0; i < n; i++){
+//            a[i] = c[i];
+//        }
+//        char[] b = new char[c.length-n];
+//        for (int i = 0; i < c.length-n; i++){
+//            b[i] = c[i+n];
+//        }
+//        StringBuffer s1 = new StringBuffer();
+//        s1.append(String.valueOf(b));
+//        s1.append(String.valueOf(a));
+//        return s1.toString();
+//    }
+        String sub = s.substring(n);
+        String sub2 = s.substring(0,n);
+        return new StringBuilder(sub+sub2).toString();
+    }
 }
